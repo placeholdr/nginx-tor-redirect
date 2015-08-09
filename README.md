@@ -3,7 +3,7 @@
 Using deny method:
 ```
 location / {
-  include nginx1.conf;
+  include tor-deny.conf;
   error_page 403 = @deny;     
 }
 
@@ -14,6 +14,12 @@ location @deny {
 
 
 Using geoip module:
+```
+http {
+    include nginx-tor-geo.conf;
+}
+```
+
 ```
 location / {
   if ($torUsers) {

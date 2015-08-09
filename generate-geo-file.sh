@@ -2,4 +2,4 @@ IPADDR=`curl -s https://check.torproject.org/exit-addresses | grep ExitAddress |
 echo -e "geo \$torUsers {
 \tdefault 0;
 $IPADDR
-}" > nginx-tor-geo.cfg
+}" > nginx-tor-geo.conf
